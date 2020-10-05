@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Biblioteca.App": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}
