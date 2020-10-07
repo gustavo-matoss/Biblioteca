@@ -53,12 +53,12 @@ namespace Biblioteca.ListaLeitura.App.Repositorio
         {
             var id = Biblioteca.Select(l => l.Id).Max();
             
-            string sql = "INSERT INTO Aluno(nome, endereco, numero, RG) VALUES(@id, @Titulo, @Autor, @Alugado)";
+            string sql = "INSERT INTO Aluno(id, titulo, autor, alugado) VALUES(@id, @Titulo, @Autor, @Alugado)";
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             command.Parameters.Add(new SqlParameter("@id", livro.Id));
             command.Parameters.Add(new SqlParameter("@Titulo",livro.Titulo));
             command.Parameters.Add(new SqlParameter("@Autor", livro.Autor));
-            command.Parameters.Add(new SqlParameter("@Alugado", false));
+            command.Parameters.Add(new SqlParameter("@Alugado", 0));
 
             sqlConnection.Open();
             command.ExecuteNonQuery();
