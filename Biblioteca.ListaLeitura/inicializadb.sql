@@ -9,7 +9,7 @@ CREATE TABLE biblioteca(
 );
 
 CREATE TABLE users(
-     ID samllint NOT NULL DEFAULT '1899',
+     ID samllint NOT NULL DEFAULT '0',
      USER varchar(64),
      PASSWORD varchar(64),
 	 CONSTRAINT users PRIMARY KEY  (ID,USER)
